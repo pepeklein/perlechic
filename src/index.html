@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
+    <title>Perle Chic - Calculadora</title>
+
+    <!-- Bootstrap CSS for responsive design -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Button to toggle between light and dark themes -->
+    <button id="toggle-theme" class="btn">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Main container -->
+    <div class="container mt-4">
+        <h1 class="text-center">Calculadora Artesanal</h1>
+
+        <!-- Category selection -->
+        <div class="mb-3">
+            <label for="categoria" class="form-label">Escolha a categoria:</label>
+            <select id="categoria" class="form-select">
+                <option value="" disabled selected>Escolher categoria</option>
+                <option value="pulseira">Pulseira</option>
+                <option value="colar">Colar</option>
+            </select>
+        </div>
+
+        <!-- Type selection -->
+        <div class="mb-3">
+            <label for="tipo" class="form-label">Escolha o tipo:</label>
+            <select id="tipo" class="form-select">
+                <option value="" disabled selected>Escolher tipo</option>
+            </select>
+        </div>
+
+        <!-- Input for base measurement -->
+        <div class="mb-3">
+            <label for="base" class="form-label">Insira os centímetros da base:</label>
+            <input type="number" id="base" class="form-control" placeholder="Ex: 15">
+        </div>
+
+        <!-- Input for additional measurement -->
+        <div class="mb-3">
+            <label for="adicional" class="form-label">Insira os centímetros adicionais:</label>
+            <input type="number" id="adicional" class="form-control" placeholder="Ex: 5">
+        </div>
+
+        <!-- Button to calculate costs -->
+        <button id="calcular" class="btn btn-primary w-100">Calcular</button>
+
+        <!-- Results section -->
+        <h2 class="mt-4">Resultados:</h2>
+        <p id="resultado"></p>
+
+        <!-- Chart for visualizing costs -->
+        <canvas id="grafico" width="400" height="200" class="mt-4"></canvas>
+    </div>
+
+    <!-- Chart.js for rendering charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Renderer script for handling UI logic -->
+    <script src="assets/js/renderer.js"></script>
+</body>
+</html>
