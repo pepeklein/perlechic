@@ -4,11 +4,13 @@
     "description": "Aplicativo para calcular custos de produção e venda de joias artesanais.",
     "main": "src/assets/js/main.js",
     "scripts": {
-      "start": "electron ."
+        "start": "electron .",
+        "package": "electron-packager . PerleChic --platform=darwin,win32,linux --arch=x64 --out=dist --overwrite"
     },
     "author": "Pedro Klein",
     "license": "MIT",
     "devDependencies": {
-      "electron": "^25.0.0"
+        "electron": "^25.0.0",
+        "electron-packager": "^17.1.2"
     }
-  }
+}

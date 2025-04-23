@@ -31,3 +31,10 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Electron cache
+.cache/
+
+# Other configuration files
+.envrc
+.editorconfig
